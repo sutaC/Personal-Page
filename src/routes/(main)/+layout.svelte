@@ -48,14 +48,20 @@
 		--grad-gray: linear-gradient(var(--clr-black-75), var(--clr-black-25));
 	}
 
-	:global(body) {
-		margin: 0;
-		min-height: 100vh;
+	:global(*) {
 		box-sizing: border-box;
-
-		text-align: center;
+	}
+	:global(html) {
 		font-size: 16px;
 		font-family: 'Alegreya Sans', sans-serif;
+	}
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+		max-width: 100vw;
+
+		text-align: center;
 		color: var(--clr-black-100);
 	}
 
@@ -82,7 +88,8 @@
 	:global(h3),
 	:global(h4),
 	:global(h5),
-	:global(h6) {
+	:global(h6),
+	:global(a) {
 		font-family: 'Signika', sans-serif;
 	}
 
@@ -108,12 +115,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0.5rem 1rem;
+
 		width: 100%;
 	}
 
 	header {
 		border-bottom: 2px solid var(--clr-black-10);
+		padding: 0.5rem 1rem;
+		user-select: none;
 	}
 	header > div {
 		display: flex;
@@ -139,8 +148,19 @@
 		color: var(--clr-black-75);
 
 		border-top: 2px solid var(--clr-black-10);
+		padding: 1rem;
 	}
 	footer p {
 		margin: 0;
+	}
+
+	@media (width >= 900px) {
+		:global(html) {
+			font-size: 21px;
+		}
+
+		footer {
+			flex-direction: row;
+		}
 	}
 </style>
