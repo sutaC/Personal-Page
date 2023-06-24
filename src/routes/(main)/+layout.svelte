@@ -35,7 +35,7 @@
 
 	:root {
 		--clr-primary: hsl(255, 95%, 59%);
-		--clr-secondary: hsl(255, 94%, 74%);
+		--clr-secondary: rgb(158, 126, 251);
 		--clr-black-100: hsl(255, 65%, 10%);
 		--clr-black-75: hsla(255, 65%, 10%, 0.75);
 		--clr-black-50: hsla(255, 65%, 10%, 0.5);
@@ -44,8 +44,7 @@
 		--clr-black-5: hsla(255, 65%, 10%, 0.05);
 		--clr-error: hsl(0, 95%, 59%);
 
-		--grad-main: linear-gradient(var(--clr-primary), var(--clr-secondary));
-		--grad-gray: linear-gradient(var(--clr-black-75), var(--clr-black-25));
+		--gap-size: 8rem;
 	}
 
 	:global(*) {
@@ -54,31 +53,33 @@
 	:global(html) {
 		font-size: 16px;
 		font-family: 'Alegreya Sans', sans-serif;
+		text-align: center;
+		color: var(--clr-black-100);
+
+		scroll-behavior: smooth;
+		text-wrap: balance;
 	}
 	:global(body) {
 		margin: 0;
 		padding: 0;
 		min-height: 100vh;
 		max-width: 100vw;
-
-		text-align: center;
-		color: var(--clr-black-100);
 	}
 
 	:global(h1) {
-		font-size: 4.209rem;
+		font-size: 3.052rem;
 	}
 	:global(h2) {
-		font-size: 3.157rem;
+		font-size: 2.441rem;
 	}
 	:global(h3) {
-		font-size: 2.369rem;
+		font-size: 1.953rem;
 	}
 	:global(h4) {
-		font-size: 1.777rem;
+		font-size: 1.563rem;
 	}
 	:global(h5) {
-		font-size: 1.333rem;
+		font-size: 1.25rem;
 	}
 	:global(h6) {
 		font-size: 1rem;
@@ -91,14 +92,17 @@
 	:global(h6),
 	:global(a) {
 		font-family: 'Signika', sans-serif;
+		margin: 0;
 	}
 
-	:gobal(p) {
+	:global(p) {
 		font-size: 1rem;
+		color: var(--clr-black-75);
+		margin: 0;
 	}
 	:global(a) {
-		color: var(--clr-black-100);
 		font-weight: bold;
+		color: var(--clr-black-100);
 	}
 
 	:global(.light) {
@@ -120,8 +124,15 @@
 	}
 
 	header {
+		position: fixed;
+		top: 0;
+
 		border-bottom: 2px solid var(--clr-black-10);
 		padding: 0.5rem 1rem;
+		margin-bottom: var(--gap-size);
+
+		background-color: white;
+
 		user-select: none;
 	}
 	header > div {
@@ -138,25 +149,36 @@
 	}
 
 	footer {
-		position: fixed;
-		left: 0;
-		bottom: 0;
-
 		flex-direction: column-reverse;
 		gap: 0.5rem;
 
-		color: var(--clr-black-75);
-
+		margin-top: var(--gap-size);
 		border-top: 2px solid var(--clr-black-10);
 		padding: 1rem;
 	}
-	footer p {
-		margin: 0;
-	}
 
-	@media (width >= 900px) {
+	@media (width >= 650px) {
 		:global(html) {
 			font-size: 21px;
+		}
+
+		:global(h1) {
+			font-size: 4.209rem;
+		}
+		:global(h2) {
+			font-size: 3.157rem;
+		}
+		:global(h3) {
+			font-size: 2.369rem;
+		}
+		:global(h4) {
+			font-size: 1.777rem;
+		}
+		:global(h5) {
+			font-size: 1.333rem;
+		}
+		:global(h6) {
+			font-size: 1rem;
 		}
 
 		footer {
