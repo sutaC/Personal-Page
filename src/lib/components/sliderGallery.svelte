@@ -38,8 +38,18 @@
 			class="enlarge"
 			aria-label="Enlarge image"
 		/>
-		<button class="leftBtn" disabled={!leftBtnActive} on:click={moveLeft} />
-		<button class="rightBtn" disabled={!rightBtnActive} on:click={moveRight} />
+		<button
+			class="leftBtn"
+			disabled={!leftBtnActive}
+			on:click={moveLeft}
+			aria-label="See earlier photo"
+		/>
+		<button
+			class="rightBtn"
+			disabled={!rightBtnActive}
+			on:click={moveRight}
+			aria-label="See next photo"
+		/>
 	</div>
 </div>
 

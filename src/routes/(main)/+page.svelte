@@ -83,9 +83,9 @@
 			you're interested in collaboration or have any questions, feel free to contact me using the
 			provided contact details. I look forward to hearing from you!
 		</p>
-		<a href="/aboutme">
+		<a href="/aboutme" aria-label="See aboute me page">
 			<StyledButton
-				>See more <img
+				>See more<img
 					src="/Icons/arrow-right-circle.svg"
 					alt="Arrow right"
 					class="icon"
