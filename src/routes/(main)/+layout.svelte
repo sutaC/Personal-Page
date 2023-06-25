@@ -14,7 +14,7 @@
 		>
 			<img src="/Icons/discord-blank-icon.svg" alt="Discord Profile" />
 		</a>
-		<a href="mailto:catus.pl@gmail.com">
+		<a href="mailto:catus.pl@gmail.com" rel="noopener noreferrer">
 			<img src="/Icons/mail-blank-icon.svg" alt="Mail" />
 		</a>
 	</div>
@@ -106,11 +106,24 @@
 	:global(.small) {
 		font-size: 0.75rem;
 	}
+	:global(.light) {
+		font-weight: lighter;
+	}
 	:global(.subtitle) {
 		font-size: 1.953rem;
 		font-weight: lighter;
 		font-family: 'Signika', sans-serif;
 		color: var(--clr-primary);
+	}
+
+	:global(section) {
+		margin: 14rem auto;
+	}
+	:global(section:first-child) {
+		margin-top: 2rem;
+	}
+	:global(section:last-child) {
+		margin-bottom: 4rem;
 	}
 
 	/* Main */
@@ -185,6 +198,10 @@
 		}
 		:global(.subtitle) {
 			font-size: 2.369rem;
+		}
+
+		:global(section) {
+			margin: 16rem auto;
 		}
 
 		footer {

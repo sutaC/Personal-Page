@@ -96,17 +96,6 @@
 </main>
 
 <style>
-	/* Main */
-	section {
-		margin: 14rem auto;
-	}
-	section:first-child {
-		margin-top: 0;
-	}
-	section:last-child {
-		margin-bottom: 4rem;
-	}
-
 	/* General */
 	.icon {
 		width: 1.5rem;
@@ -134,13 +123,5 @@
 	/* Footer CTA */
 	.cta {
 		text-align: left;
-	}
-
-	/* Desktop view */
-
-	@media (width >= 650px) {
-		section {
-			margin: 16rem auto;
-		}
 	}
 </style>
