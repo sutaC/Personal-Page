@@ -13,7 +13,7 @@
 		align-items: center;
 		gap: 0.5rem;
 
-		margin: auto;
+		margin: 2.5rem auto;
 		padding: 1em 2em;
 
 		font-size: 1rem;
@@ -24,6 +24,8 @@
 		box-shadow: 0.125rem 0.125rem 0.25rem var(--clr-black-25);
 		border: none;
 		border-radius: 100px;
+
+		cursor: pointer;
 	}
 
 	/* Primary */

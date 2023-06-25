@@ -1,21 +1,21 @@
 <header>
 	<div>
-		<a href="/"><img src="/MyLogo.svg" alt="Logo" class="logo" /></a>
+		<a href="/"><img src="/MyLogo.svg" alt="Home Page" class="logo" /></a>
 		<a href="/aboutme">Aboute Me</a>
 	</div>
 	<div>
 		<a href="https://github.com/sutaC" target="_blank" rel="noopener noreferrer">
-			<img src="/Icons/github-blank-icon.svg" alt="Github Icon" />
+			<img src="/Icons/github-blank-icon.svg" alt="Github Profile" />
 		</a>
 		<a
 			href="https://discord.com/users/560883480251334666"
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<img src="/Icons/discord-blank-icon.svg" alt="Discord Icon" />
+			<img src="/Icons/discord-blank-icon.svg" alt="Discord Profile" />
 		</a>
 		<a href="mailto:catus.pl@gmail.com">
-			<img src="/Icons/mail-blank-icon.svg" alt="Mail Icon" />
+			<img src="/Icons/mail-blank-icon.svg" alt="Mail" />
 		</a>
 	</div>
 </header>
@@ -43,8 +43,6 @@
 		--clr-black-10: hsla(255, 65%, 10%, 0.1);
 		--clr-black-5: hsla(255, 65%, 10%, 0.05);
 		--clr-error: hsl(0, 95%, 59%);
-
-		--gap-size: 8rem;
 	}
 
 	:global(*) {
@@ -105,11 +103,14 @@
 		color: var(--clr-black-100);
 	}
 
-	:global(.light) {
-		font-weight: lighter;
-	}
 	:global(.small) {
 		font-size: 0.75rem;
+	}
+	:global(.subtitle) {
+		font-size: 1.953rem;
+		font-weight: lighter;
+		font-family: 'Signika', sans-serif;
+		color: var(--clr-primary);
 	}
 
 	/* Main */
@@ -124,12 +125,14 @@
 	}
 
 	header {
-		position: fixed;
+		position: sticky;
 		top: 0;
+		left: 0;
+
+		z-index: 1;
 
 		border-bottom: 2px solid var(--clr-black-10);
 		padding: 0.5rem 1rem;
-		margin-bottom: var(--gap-size);
 
 		background-color: white;
 
@@ -152,11 +155,11 @@
 		flex-direction: column-reverse;
 		gap: 0.5rem;
 
-		margin-top: var(--gap-size);
 		border-top: 2px solid var(--clr-black-10);
 		padding: 1rem;
 	}
 
+	/* Desktop view */
 	@media (width >= 650px) {
 		:global(html) {
 			font-size: 21px;
@@ -179,6 +182,9 @@
 		}
 		:global(h6) {
 			font-size: 1rem;
+		}
+		:global(.subtitle) {
+			font-size: 2.369rem;
 		}
 
 		footer {
