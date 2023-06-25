@@ -73,7 +73,7 @@
 
 		border-radius: 10px;
 
-		opacity: 0.5;
+		opacity: 0.9;
 	}
 	.example:hover + .enlarge,
 	.enlarge:hover {
@@ -101,8 +101,8 @@
 		position: absolute;
 		top: 0;
 
-		width: 5%;
-		height: 99%;
+		width: 10%;
+		height: 97%;
 
 		border: 1px solid white;
 
@@ -132,5 +132,13 @@
 		right: 0;
 		border-radius: 0 2rem 2rem 0;
 		background-image: url('/Icons/caret-right.svg');
+	}
+
+	/* Desktop view */
+	@media (width >= 600px) {
+		button {
+			width: 5%;
+			height: 99%;
+		}
 	}
 </style>
