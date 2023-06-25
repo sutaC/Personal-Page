@@ -8,7 +8,7 @@
 		<p class="subtitle">Hi! I'm Catus,</p>
 		<h1>a web developer specializing in frontend</h1>
 		<p>I create functional and interesting interfaces. Get in touch!</p>
-		<a href="#work">
+		<a href="#work" aria-label="See my portfolio">
 			<StyledButton type="Primary"
 				>See my work <img class="icon" src="/Icons/arrow-down-circle.svg" alt="Arrow down" />
 			</StyledButton>
@@ -22,10 +22,10 @@
 			<SliderGallery
 				backgroundColor="#21092F"
 				srcList={[
-					'/Images/ss-cardDetails-des.png',
-					'/Images/ss-cardDetails-err.png',
-					'/Images/ss-cardDetails-suc.png',
-					'/Images/img-cardDetails-mob.png'
+					'/Images/ss-cardDetails-des.webp',
+					'/Images/ss-cardDetails-err.webp',
+					'/Images/ss-cardDetails-suc.webp',
+					'/Images/img-cardDetails-mob.webp'
 				]}
 			/>
 
@@ -41,7 +41,7 @@
 		<div>
 			<SliderGallery
 				backgroundColor="#8B4EC6"
-				srcList={['/Images/ss-huddle-des.png', '/Images/img-huddle-mob.png']}
+				srcList={['/Images/ss-huddle-des.webp', '/Images/img-huddle-mob.webp']}
 			/>
 
 			<a
@@ -57,11 +57,11 @@
 			<SliderGallery
 				backgroundColor="#00494D"
 				srcList={[
-					'/Images/ss-tipCalculator-des.png',
-					'/Images/ss-tipCalculator-err.png',
-					'/Images/ss-tipCalculator-suc.png',
-					'/Images/img-tipCalculator-mob-1.png',
-					'/Images/img-tipCalculator-mob-2.png'
+					'/Images/ss-tipCalculator-des.webp',
+					'/Images/ss-tipCalculator-err.webp',
+					'/Images/ss-tipCalculator-suc.webp',
+					'/Images/img-tipCalculator-mob-1.webp',
+					'/Images/img-tipCalculator-mob-2.webp'
 				]}
 			/>
 
