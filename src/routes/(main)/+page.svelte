@@ -102,7 +102,8 @@
 	}
 
 	.hero,
-	.cta {
+	.cta,
+	.work a {
 		width: clamp(50%, 50ch, 95%);
 	}
 	.hero > *,
