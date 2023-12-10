@@ -24,7 +24,7 @@
 <slot />
 
 <footer class="small">
-	<p>Copyright © 2023 Antoni Siekański All Rights Reserved</p>
+	<p>Created by: sutaC</p>
 	<p>Contact: catus.pl@gmail.com</p>
 </footer>
 

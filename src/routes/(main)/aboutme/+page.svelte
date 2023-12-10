@@ -1,7 +1,7 @@
 <main>
 	<section class="hero">
 		<h1>Hi there!</h1>
-		<p class="subtitle">I'm Catus, a frontend web developer from Poland.</p>
+		<p class="subtitle">I'm sutaC, a frontend web developer from Poland.</p>
 		<p>
 			I specialize in creating functional and visually appealing websites. My passion for crafting
 			innovative solutions drives me to constantly learn and grow in this field. I strive to deliver
@@ -27,12 +27,24 @@
 				<p>Svelte&nbsp;Kit</p>
 			</div>
 			<div class="card">
+				<img src="/Icons/Technologies/Next.js-logo.svg" alt="Next.js" />
+				<p>Next.js</p>
+			</div>
+			<div class="card">
 				<img src="/Icons/Technologies/React-logo.svg" alt="React" />
 				<p>React</p>
 			</div>
 			<div class="card">
 				<img src="/Icons/Technologies/Figma-logo.svg" alt="Figma" />
 				<p>Figma</p>
+			</div>
+			<div class="card">
+				<img src="/Icons/Technologies/Express.js-logo.png" alt="Next.js" />
+				<p>Express.js</p>
+			</div>
+			<div class="card">
+				<img src="/Icons/Technologies/Node.js-logo.png" alt="Next.js" />
+				<p>Node.js</p>
 			</div>
 			<div class="card">
 				<img src="/Icons/Technologies/Git-logo.svg" alt="Git" />
@@ -105,6 +117,7 @@
 	}
 	.card {
 		flex: 1;
+		min-width: 15%;
 
 		margin: 1rem 0;
 		padding: 1rem;

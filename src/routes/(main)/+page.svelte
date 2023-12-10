@@ -5,9 +5,9 @@
 
 <main>
 	<section class="hero">
-		<p class="subtitle">Hi! I'm Catus,</p>
-		<h1>a web developer specializing in frontend</h1>
-		<p>I create functional and interesting interfaces. Get in touch!</p>
+		<p class="subtitle">Hi! I'm sutaC,</p>
+		<h1>a web developer specializing in frontend,</h1>
+		<p>but the backend doesn't scare me! I create functional interfaces, so get in touch!</p>
 		<a href="#work" aria-label="See my portfolio">
 			<StyledButton type="Primary"
 				>See my work <img class="icon" src="/Icons/arrow-down-circle.svg" alt="Arrow down" />
@@ -20,57 +20,38 @@
 
 		<div>
 			<SliderGallery
-				backgroundColor="#21092F"
+				backgroundColor="#38303B"
 				srcList={[
-					'/Images/ss-cardDetails-des.webp',
-					'/Images/ss-cardDetails-err.webp',
-					'/Images/ss-cardDetails-suc.webp',
-					'/Images/img-cardDetails-mob.webp'
+					'/Images/img-connect4-1.png',
+					'/Images/img-connect4-2.png',
+					'/Images/img-connect4-3.png',
+					'/Images/img-connect4-4.png'
 				]}
 			/>
 
 			<a
-				href="https://www.frontendmentor.io/solutions/interactive-card-details-form-sveltekit-Qryu3cUA0d"
+				href="https://sutac-connect4.netlify.app/"
 				class="light small"
 				target="_blank"
-				rel="noopener noreferrer"
-				>https://www.frontendmentor.io/solutions/interactive-card-details-form-sveltekit-Qryu3cUA0d</a
+				rel="noopener noreferrer">Connect4</a
 			>
 		</div>
 
 		<div>
 			<SliderGallery
-				backgroundColor="#8B4EC6"
-				srcList={['/Images/ss-huddle-des.webp', '/Images/img-huddle-mob.webp']}
-			/>
-
-			<a
-				href="https://www.frontendmentor.io/solutions/huddle-landing-page-only-html-and-css-gzkCEGf104"
-				class="light small"
-				target="_blank"
-				rel="noopener noreferrer"
-				>https://www.frontendmentor.io/solutions/huddle-landing-page-only-html-and-css-gzkCEGf104</a
-			>
-		</div>
-
-		<div>
-			<SliderGallery
-				backgroundColor="#00494D"
+				backgroundColor="#1B182D"
 				srcList={[
-					'/Images/ss-tipCalculator-des.webp',
-					'/Images/ss-tipCalculator-err.webp',
-					'/Images/ss-tipCalculator-suc.webp',
-					'/Images/img-tipCalculator-mob-1.webp',
-					'/Images/img-tipCalculator-mob-2.webp'
+					'/Images/img-snakegame-1.png',
+					'/Images/img-snakegame-2.png',
+					'/Images/img-snakegame-3.png'
 				]}
 			/>
 
 			<a
-				href="https://www.frontendmentor.io/solutions/tip-calculator-app-sveltekit-KtYUWu3vlq"
+				href="https://sutac.github.io/Snake-game/"
 				class="light small"
 				target="_blank"
-				rel="noopener noreferrer"
-				>https://www.frontendmentor.io/solutions/tip-calculator-app-sveltekit-KtYUWu3vlq</a
+				rel="noopener noreferrer">Snake game</a
 			>
 		</div>
 	</section>
