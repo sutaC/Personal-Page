@@ -54,6 +54,25 @@
 				rel="noopener noreferrer">Snake game</a
 			>
 		</div>
+
+		<div>
+			<SliderGallery
+				backgroundColor="#397732"
+				srcList={[
+					'/Images/img-theaiquill-1.png',
+					'/Images/img-theaiquill-2.png',
+					'/Images/img-theaiquill-3.png',
+					'/Images/img-theaiquill-4.png'
+				]}
+			/>
+
+			<a
+				href="https://theaiquill.site/"
+				class="light small"
+				target="_blank"
+				rel="noopener noreferrer">The AI Quill (Design)</a
+			>
+		</div>
 	</section>
 
 	<section class="cta">
