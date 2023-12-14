@@ -30,7 +30,7 @@
 			/>
 
 			<a
-				href="https://sutac-connect4.netlify.app/"
+				href="https://connect4.sutac.pl/"
 				class="light small"
 				target="_blank"
 				rel="noopener noreferrer">Connect4</a
@@ -48,7 +48,7 @@
 			/>
 
 			<a
-				href="https://sutac.github.io/Snake-game/"
+				href="https://snake.sutac.pl/"
 				class="light small"
 				target="_blank"
 				rel="noopener noreferrer">Snake game</a
