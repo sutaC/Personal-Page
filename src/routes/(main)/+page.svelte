@@ -8,7 +8,7 @@
 		<p class="subtitle">Hi! I'm sutaC,</p>
 		<h1>a web developer specializing in frontend,</h1>
 		<p>but the backend doesn't scare me! I create functional interfaces, so get in touch!</p>
-		<a href="#work" aria-label="See my portfolio">
+		<a href="#work">
 			<StyledButton type="Primary"
 				>See my work <img class="icon" src="/Icons/arrow-down-circle.svg" alt="Arrow down" />
 			</StyledButton>
@@ -83,9 +83,9 @@
 			you're interested in collaboration or have any questions, feel free to contact me using the
 			provided contact details. I look forward to hearing from you!
 		</p>
-		<a href="/aboutme" aria-label="See aboute me page">
+		<a href="/aboutme">
 			<StyledButton
-				>See more<img
+				>See more about me<img
 					src="/Icons/arrow-right-circle.svg"
 					alt="Arrow right"
 					class="icon"

@@ -2,7 +2,7 @@
 	<div>
 		<a href="/" aria-label="See home page"><img src="/MyLogo.svg" alt="Home Page" class="logo" /></a
 		>
-		<a href="/aboutme" aria-label="See aboute me page">Aboute Me</a>
+		<a href="/aboutme" aria-label="See about me page">About Me</a>
 	</div>
 	<div>
 		<a href="https://github.com/sutaC" target="_blank" rel="noopener noreferrer">
