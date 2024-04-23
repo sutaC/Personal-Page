@@ -77,6 +77,17 @@ small {
 	font-size: 0.8rem; /* 12.8px */
 }
 
+/* Custom elements */
+
+a.custom {
+	color: var(--clr-accent);
+	transition: text-shadow 200ms ease-out;
+}
+
+a.custom:is(:hover, :focus-visible) {
+	text-shadow: 0 0 4px var(--clr-accent);
+}
+
 /* Desktop */
 @media (width >= 700px) {
 	html {

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from '$lib/sections/Header.svelte';
 	import Hero from '$lib/sections/Hero.svelte';
+	import Footer from '$lib/sections/Footer.svelte';
 </script>
 
 <div class="app">
@@ -56,6 +57,8 @@
 		velit expedita soluta accusantium fuga nesciunt excepturi blanditiis, molestiae quis at numquam
 		dignissimos aut deserunt quaerat hic! Repellat?
 	</p>
+
+	<Footer />
 </div>
 
 <style>
