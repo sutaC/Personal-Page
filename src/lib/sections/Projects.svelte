@@ -200,6 +200,12 @@
 
 	.showcase a {
 		color: var(--clr-text);
+		transition: all 200ms ease-out;
+	}
+
+	.showcase a:is(:hover, :focus-visible) {
+		scale: 1.05;
+		translate: 0 -5%;
 	}
 
 	.other {

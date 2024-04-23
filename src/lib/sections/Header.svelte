@@ -72,6 +72,12 @@
 	.logo {
 		max-height: 3rem;
 		user-select: none;
+		transition: all 200ms ease-out;
+	}
+
+	.logo:is(:hover, :focus-visible) {
+		scale: 1.05;
+		translate: 0 2.5%;
 	}
 
 	a {
@@ -85,6 +91,7 @@
 		padding-bottom: 0.5rem;
 		border-bottom: 1px solid;
 		border-image: var(--grd-lin-secondary) 1;
+		transition: all 200ms ease-out;
 	}
 
 	a.current {
@@ -94,9 +101,12 @@
 	nav:has(a.navItem:is(:hover, :focus-visible)) a.navItem:not(:hover, :focus-visible) {
 		opacity: 0.5;
 		border-image: var(--grd-lin-secondary) 1;
+		scale: 0.95;
 	}
 
 	a.navItem:is(:hover, :focus-within) {
 		border-image: var(--grd-lin-triad) 1;
+		padding-bottom: 0.3rem;
+		scale: 1.05;
 	}
 </style>

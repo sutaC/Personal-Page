@@ -60,6 +60,7 @@
 		cursor: pointer;
 		box-shadow: 0 4px 4px #0003;
 		z-index: 1;
+		transition: all 200ms ease-out;
 	}
 
 	@keyframes fadeIn {
@@ -81,5 +82,10 @@
 		translate: -50% -50%;
 		border-radius: 10;
 		animation: fadeIn 200ms ease-in;
+	}
+
+	li:is(:hover, :focus-visible, :focus-within) a {
+		scale: 1.05;
+		translate: 0 -1.5%;
 	}
 </style>
