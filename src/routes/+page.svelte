@@ -22,6 +22,12 @@
 	.app {
 		display: flex;
 		flex-direction: column;
-		gap: 4rem;
+		gap: 5.5rem;
+	}
+
+	@media (width >= 500px) {
+		.app {
+			gap: 10rem;
+		}
 	}
 </style>
