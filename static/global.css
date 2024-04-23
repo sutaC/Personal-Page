@@ -7,6 +7,8 @@
 	--clr-secondary: hsl(255, 94%, 26%);
 	--clr-accent: hsl(323, 95%, 58%);
 
+	--clr-secondary-light: hsla(255, 94%, 26%, 0.5);
+
 	--grd-lin-primary: linear-gradient(to right bottom, var(--clr-primary), var(--clr-secondary));
 	--grd-lin-triad: linear-gradient(
 		to right bottom,
@@ -17,11 +19,11 @@
 	--grd-lin-secondary: linear-gradient(
 		to right bottom,
 		var(--clr-secondary),
-		var(--clr-background)
+		var(--clr-secondary-light)
 	);
 	--grd-rad-primary: radial-gradient(var(--clr-primary), var(--clr-secondary));
 	--grd-rad-triad: radial-gradient(var(--clr-accent), var(--clr-primary), var(--clr-secondary));
-	--grd-rad-secondary: radial-gradient(var(--clr-secondary), var(--clr-background));
+	--grd-rad-secondary: radial-gradient(var(--clr-secondary), var(--clr-secondary-light));
 }
 
 * {
@@ -32,6 +34,7 @@ html {
 	font-family: 'Noto Sans Old Italic';
 	font-size: 100%;
 	color: var(--clr-text);
+	scroll-behavior: smooth;
 } /* 16px */
 
 body {
