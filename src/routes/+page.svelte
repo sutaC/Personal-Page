@@ -3,22 +3,13 @@
 	import Hero from '$lib/sections/Hero.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
 	import About from '$lib/sections/About.svelte';
+	import Projects from '$lib/sections/Projects.svelte';
 </script>
 
 <div class="app">
 	<Header />
 	<Hero />
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, similique voluptate natus in
-		voluptatem laboriosam at ex! Eveniet dignissimos molestias natus, explicabo ex nobis, porro
-		dolorem magni tempora rerum dolore.
-	</p>
-	<p>
-		Asperiores quo, facere quisquam officia quos perspiciatis totam, ab laborum voluptate numquam
-		accusantium nostrum sint, incidunt minus odio reiciendis earum veritatis culpa reprehenderit
-		dolorum obcaecati architecto at. Nulla, amet labore.
-	</p>
-
+	<Projects />
 	<About />
 
 	<p>

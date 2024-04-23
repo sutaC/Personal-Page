@@ -24,11 +24,6 @@
 		align-self: center;
 	}
 
-	h2 {
-		text-align: center;
-		margin-bottom: 1rem;
-	}
-
 	.profile {
 		padding: 1rem;
 		border-radius: 1rem;

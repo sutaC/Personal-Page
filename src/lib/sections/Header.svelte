@@ -1,6 +1,10 @@
+<script lang="ts">
+	// TODO: changing current
+</script>
+
 <header>
 	<nav>
-		<a href="# " class="navItem current">Projects</a>
+		<a href="#projects" class="navItem current">Projects</a>
 		<a href="#about" class="navItem">About</a>
 		<a href=" " aria-label="Start"><img src="/images/logo.svg" alt="Logo" class="logo" /></a>
 		<a href="# " class="navItem">Technologies</a>
@@ -17,6 +21,7 @@
 		border-image: var(--grd-lin-primary) 1;
 		box-shadow: 4px 0 4px hsla(0, 0%, 0%, 0.2);
 		background-color: var(--clr-background);
+		z-index: 99999;
 	}
 
 	nav {

@@ -96,6 +96,8 @@ h2.custom {
 	background: var(--grd-lin-primary);
 	background-clip: text;
 	color: transparent;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 /* Mobile */
