@@ -1,0 +1,85 @@
+<section id="contact" aria-labelledby="hContact">
+	<h2 id="hContact" class="custom">Contact</h2>
+	<small class="subscript">Where to Find My Work and Get in Touch</small>
+
+	<ul>
+		<li>
+			<a
+				href="https://discord.com/users/560883480251334666"
+				target="_blank"
+				rel="noopener noreferrer">Discord</a
+			>
+		</li>
+		<li><a href="mailto:catus.pl@gmail.com">Mail</a></li>
+		<li><a href="https://github.com/sutaC" target="_blank" rel="noopener noreferrer">Github</a></li>
+		<li>
+			<a
+				href="https://www.frontendmentor.io/profile/sutaC"
+				target="_blank"
+				rel="noopener noreferrer">Frontend Mentor</a
+			>
+		</li>
+	</ul>
+</section>
+
+<style>
+	.subscript {
+		text-align: center;
+		width: 100%;
+		display: block;
+		margin: 1rem 0;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
+		border-radius: 1rem;
+	}
+
+	li a {
+		width: 8rem;
+		aspect-ratio: 1;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: var(--grd-rad-secondary);
+		color: var(--clr-text);
+		cursor: pointer;
+		box-shadow: 0 4px 4px #0003;
+		z-index: 1;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+	}
+
+	li:is(:hover, :focus-visible, :focus-within)::before {
+		content: '';
+		position: absolute;
+		display: block;
+		left: 50%;
+		top: 50%;
+		width: 100%;
+		aspect-ratio: 1;
+		background: var(--grd-rad-primary);
+		z-index: -1;
+		translate: -50% -50%;
+		border-radius: 10;
+		animation: fadeIn 200ms ease-in;
+	}
+</style>

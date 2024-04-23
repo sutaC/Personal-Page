@@ -4,6 +4,7 @@
 	import Footer from '$lib/sections/Footer.svelte';
 	import About from '$lib/sections/About.svelte';
 	import Projects from '$lib/sections/Projects.svelte';
+	import Contact from '$lib/sections/Contact.svelte';
 </script>
 
 <div class="app">
@@ -27,21 +28,8 @@
 		quos, dicta quibusdam excepturi deleniti exercitationem quia doloremque, nesciunt ipsam, nisi
 		rerum quaerat? Culpa itaque fugiat neque eligendi.
 	</p>
-	<p>
-		Itaque tempore repellat eum illo doloremque, ipsa debitis optio alias deleniti earum nostrum
-		aliquam quas aperiam doloribus in possimus delectus odio id nihil pariatur molestiae provident
-		quidem labore cumque. Incidunt?
-	</p>
-	<p>
-		Sapiente aut ex harum dolor at dolores sint corrupti incidunt hic minima blanditiis iure
-		excepturi voluptates, consectetur fugiat soluta? Omnis ipsa autem tempora sit architecto
-		dignissimos vel molestias similique voluptatum.
-	</p>
-	<p>
-		Laudantium qui fugiat quas voluptates, dolores illum perspiciatis, dolor cum laboriosam unde
-		velit expedita soluta accusantium fuga nesciunt excepturi blanditiis, molestiae quis at numquam
-		dignissimos aut deserunt quaerat hic! Repellat?
-	</p>
+
+	<Contact />
 
 	<Footer />
 </div>

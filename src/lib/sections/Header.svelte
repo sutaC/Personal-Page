@@ -7,8 +7,8 @@
 		<a href="#projects" class="navItem">Projects</a>
 		<a href="#about" class="navItem">About</a>
 		<a href=" " aria-label="Start"><img src="/images/logo.svg" alt="Logo" class="logo" /></a>
-		<a href="# " class="navItem">Technologies</a>
-		<a href="# " class="navItem">Contact</a>
+		<a href="#technologies" class="navItem">Technologies</a>
+		<a href="#contact" class="navItem">Contact</a>
 	</nav>
 </header>
 
@@ -55,9 +55,9 @@
 		border-image: var(--grd-lin-secondary) 1;
 	}
 
-	a.current {
+	/* a.current {
 		border-image: var(--grd-lin-triad) 1;
-	}
+	} */
 
 	nav:has(a.navItem:is(:hover, :focus-visible)) a.navItem:not(:hover, :focus-visible) {
 		opacity: 0.5;
