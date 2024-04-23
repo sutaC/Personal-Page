@@ -15,7 +15,6 @@
 	}
 
 	p {
-		margin: auto;
-		max-width: 30ch;
+		padding: 0 1rem;
 	}
 </style>

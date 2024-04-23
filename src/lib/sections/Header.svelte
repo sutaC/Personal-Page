@@ -1,10 +1,10 @@
 <header>
 	<nav>
-		<a href="# " class="current">Projects</a>
-		<a href="# ">About</a>
-		<img src="logo.svg" alt="Logo" class="logo" />
-		<a href="# ">Technologies</a>
-		<a href="# ">Contact</a>
+		<a href="# " class="navItem current">Projects</a>
+		<a href="#about" class="navItem">About</a>
+		<a href=" " aria-label="Start"><img src="/images/logo.svg" alt="Logo" class="logo" /></a>
+		<a href="# " class="navItem">Technologies</a>
+		<a href="# " class="navItem">Contact</a>
 	</nav>
 </header>
 
@@ -34,6 +34,7 @@
 
 	.logo {
 		max-height: 3rem;
+		user-select: none;
 	}
 
 	a {
@@ -43,7 +44,7 @@
 		transition: opacity 300ms ease-out, border-image 400ms ease-out;
 	}
 
-	a:not(.logo) {
+	a.navItem {
 		padding-bottom: 0.5rem;
 		border-bottom: 1px solid;
 		border-image: var(--grd-lin-secondary) 1;
@@ -53,12 +54,12 @@
 		border-image: var(--grd-lin-triad) 1;
 	}
 
-	nav:has(a:is(:hover, :focus-visible)) a:not(:hover, :focus-visible) {
+	nav:has(a.navItem:is(:hover, :focus-visible)) a.navItem:not(:hover, :focus-visible) {
 		opacity: 0.5;
 		border-image: var(--grd-lin-secondary) 1;
 	}
 
-	a:is(:hover, :focus-within) {
+	a.navItem:is(:hover, :focus-within) {
 		border-image: var(--grd-lin-triad) 1;
 	}
 </style>

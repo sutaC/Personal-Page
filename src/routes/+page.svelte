@@ -2,6 +2,7 @@
 	import Header from '$lib/sections/Header.svelte';
 	import Hero from '$lib/sections/Hero.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
+	import About from '$lib/sections/About.svelte';
 </script>
 
 <div class="app">
@@ -17,16 +18,9 @@
 		accusantium nostrum sint, incidunt minus odio reiciendis earum veritatis culpa reprehenderit
 		dolorum obcaecati architecto at. Nulla, amet labore.
 	</p>
-	<p>
-		Tempora vel, quidem dolores excepturi nam laborum natus aspernatur reiciendis ex omnis autem,
-		similique impedit inventore error aliquid vitae rerum fugiat recusandae voluptatum eum sapiente
-		officia molestiae facilis? Culpa, et!
-	</p>
-	<p>
-		Quasi distinctio reprehenderit ratione facere! Nobis in consequuntur ab eveniet rerum, fugit
-		culpa vero ipsa? Quisquam earum tenetur possimus? Ipsa laudantium praesentium explicabo
-		doloremque suscipit omnis earum perferendis cupiditate adipisci?
-	</p>
+
+	<About />
+
 	<p>
 		Saepe eum odit maxime adipisci voluptas laboriosam voluptatem doloremque ut laborum magni
 		beatae, at suscipit, mollitia quasi assumenda sit maiores exercitationem culpa ipsum ipsam

@@ -77,6 +77,10 @@ small {
 	font-size: 0.8rem; /* 12.8px */
 }
 
+img {
+	max-width: 100%;
+}
+
 /* Custom elements */
 
 a.custom {
@@ -88,8 +92,30 @@ a.custom:is(:hover, :focus-visible) {
 	text-shadow: 0 0 4px var(--clr-accent);
 }
 
+h2.custom {
+	background: var(--grd-lin-primary);
+	background-clip: text;
+	color: transparent;
+}
+
+/* Mobile */
+
+.mobile {
+	display: block;
+}
+.desktop {
+	display: none;
+}
+
 /* Desktop */
-@media (width >= 700px) {
+@media (width >= 500px) {
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: block;
+	}
+
 	html {
 		font-size: 100%;
 	} /* 16px */
