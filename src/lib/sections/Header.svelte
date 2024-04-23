@@ -10,9 +10,13 @@
 
 <style>
 	header {
+		position: sticky;
+		top: 0;
 		padding: 0.25rem 0.5rem;
 		border-bottom: 1px solid;
 		border-image: var(--grd-lin-primary) 1;
+		box-shadow: 4px 0 4px hsla(0, 0%, 0%, 0.2);
+		background-color: var(--clr-background);
 	}
 
 	nav {
