@@ -1,39 +1,86 @@
+<script lang="ts">
+	type ProjectData = {
+		name: string;
+		description: string;
+		link: string;
+	};
+
+	const projects: ProjectData[] = [
+		{
+			name: 'Connect4',
+			link: 'https://connect4.sutac.pl/',
+			description:
+				'Connect4 is a project aimed at implementing the classic game of the same name using web technologies.'
+		},
+		{
+			name: 'Snake',
+			link: 'https://snake.sutac.pl/',
+			description:
+				'The project is a classic Snake game running on its own game engine. It is a web application with a custom design'
+		},
+		{
+			name: 'GwiazdyZSI',
+			link: 'https://gwiazdyzsi.sutac.pl/',
+			description:
+				'Gwiazdy ZSI (ZSI Stars) is an original project aimed at storing and categorizing photos of teachers from ZSI. The application allows you to browse photos and search for them according to the teachers appearing in them.'
+		},
+		{
+			name: 'Chartex',
+			link: 'https://chartex.sutac.pl/',
+			description: 'A simple web application project for dynamic chart visualisation.'
+		},
+		{
+			name: 'GameOfLife',
+			link: 'https://sutac.github.io/GameOfLife/',
+			description: "A simple implementation of Conway's Game of Life."
+		},
+		{
+			name: 'TheAIQuill',
+			link: 'https://theaiquill.site/',
+			description:
+				'Blog written by AI made in Next.js. During the collaboration, I focused on the design and frontend of the website'
+		}
+	];
+
+	let current = 0;
+</script>
+
 <section id="projects" aria-labelledby="hProjects">
 	<h2 class="custom" id="hProjects">Projects</h2>
 
 	<div class="display">
 		<div class="projectItem">
-			<input type="radio" name="project" id="prjConnect4" checked />
+			<input type="radio" name="project" id="prjConnect4" checked on:input={() => (current = 0)} />
 			<label for="prjConnect4" data-name="Connect4">
 				<img src="/images/projects/Connect4.png" alt="Connect4" />
 			</label>
 		</div>
 		<div class="projectItem">
-			<input type="radio" name="project" id="prjSnake" />
+			<input type="radio" name="project" id="prjSnake" on:input={() => (current = 1)} />
 			<label for="prjSnake" data-name="Snake">
 				<img src="/images/projects/Snake.png" alt="Snake" />
 			</label>
 		</div>
 		<div class="projectItem">
-			<input type="radio" name="project" id="prjGwiazdyZSI" />
+			<input type="radio" name="project" id="prjGwiazdyZSI" on:input={() => (current = 2)} />
 			<label for="prjGwiazdyZSI" data-name="GwiazdyZSI">
 				<img src="/images/projects/GwiazdyZSI.png" alt="GwiazdyZSI" />
 			</label>
 		</div>
 		<div class="projectItem">
-			<input type="radio" name="project" id="prjChartex" />
+			<input type="radio" name="project" id="prjChartex" on:input={() => (current = 3)} />
 			<label for="prjChartex" data-name="Chartex">
 				<img src="/images/projects/Chartex.png" alt="Chartex" />
 			</label>
 		</div>
 		<div class="projectItem">
-			<input type="radio" name="project" id="prjGameOfLife" />
+			<input type="radio" name="project" id="prjGameOfLife" on:input={() => (current = 4)} />
 			<label for="prjGameOfLife" data-name="GameOfLife">
 				<img src="/images/projects/GameOfLife.png" alt="GameOfLife" />
 			</label>
 		</div>
 		<div class="projectItem">
-			<input type="radio" name="project" id="prjTheAIQuill" />
+			<input type="radio" name="project" id="prjTheAIQuill" on:input={() => (current = 5)} />
 			<label for="prjTheAIQuill" data-name="TheAIQuill">
 				<img src="/images/projects/TheAIQuill.png" alt="TheAIQuill" />
 			</label>
@@ -41,11 +88,10 @@
 	</div>
 
 	<div class="showcase">
-		<a href="http://{'link'}" target="_blank" rel="noopener noreferrer">Connect4</a>
-		<small class="description">
-			This is a project developing a classic game in web standards enabling online and offline
-			multiplayer gameplay thanks to the use of PWA technology.
-		</small>
+		<a href={projects[current].link} target="_blank" rel="noopener noreferrer"
+			>{projects[current].name}</a
+		>
+		<small class="description">{projects[current].description}</small>
 	</div>
 
 	<small class="other">
@@ -64,6 +110,7 @@
 
 <style>
 	section {
+		width: 100%;
 		padding: 1rem;
 		max-width: 45rem;
 		margin: auto;
@@ -103,6 +150,7 @@
 	}
 
 	.projectItem img {
+		user-select: none;
 		width: 100%;
 		transition: filter 200ms ease-out;
 	}
@@ -159,5 +207,6 @@
 		max-width: 50ch;
 		text-align: center;
 		margin: auto;
+		text-wrap: balance;
 	}
 </style>

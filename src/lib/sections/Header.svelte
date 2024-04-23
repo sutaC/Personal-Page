@@ -4,7 +4,7 @@
 
 <header>
 	<nav>
-		<a href="#projects" class="navItem current">Projects</a>
+		<a href="#projects" class="navItem">Projects</a>
 		<a href="#about" class="navItem">About</a>
 		<a href=" " aria-label="Start"><img src="/images/logo.svg" alt="Logo" class="logo" /></a>
 		<a href="# " class="navItem">Technologies</a>
