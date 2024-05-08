@@ -32,10 +32,10 @@
 
 html {
 	font-family: 'Noto Sans Old Italic';
-	font-size: 100%;
 	color: var(--clr-text);
 	scroll-behavior: smooth;
-} /* 16px */
+	scroll-padding: 4rem;
+}
 
 body {
 	background-color: var(--clr-background);
