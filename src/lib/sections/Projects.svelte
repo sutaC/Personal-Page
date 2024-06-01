@@ -64,7 +64,7 @@
 		<div class="projectItem">
 			<input type="radio" name="project" id="prjSnake" on:input={() => (current = 1)} />
 			<label for="prjSnake" data-name="Snake">
-				<img src="/images/projects/Snake.png" alt="Snake" />
+				<img src="/images/projects/Snake.svg" alt="Snake" />
 			</label>
 		</div>
 		<div class="projectItem">
@@ -76,13 +76,13 @@
 		<div class="projectItem">
 			<input type="radio" name="project" id="prjChartex" on:input={() => (current = 3)} />
 			<label for="prjChartex" data-name="Chartex">
-				<img src="/images/projects/Chartex.png" alt="Chartex" />
+				<img src="/images/projects/Chartex.svg" alt="Chartex" />
 			</label>
 		</div>
 		<div class="projectItem">
 			<input type="radio" name="project" id="prjGameOfLife" on:input={() => (current = 4)} />
 			<label for="prjGameOfLife" data-name="GameOfLife">
-				<img src="/images/projects/GameOfLife.png" alt="GameOfLife" />
+				<img src="/images/projects/GameOfLife.svg" alt="GameOfLife" />
 			</label>
 		</div>
 		<div class="projectItem">
