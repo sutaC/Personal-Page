@@ -70,7 +70,7 @@
 		<div class="projectItem">
 			<input type="radio" name="project" id="prjGwiazdyZSI" on:input={() => (current = 2)} />
 			<label for="prjGwiazdyZSI" data-name="GwiazdyZSI">
-				<img src="/images/projects/GwiazdyZSI.png" alt="GwiazdyZSI" />
+				<img src="/images/projects/GwiazdyZSI.svg" alt="GwiazdyZSI" />
 			</label>
 		</div>
 		<div class="projectItem">
