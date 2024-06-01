@@ -35,6 +35,12 @@
 			description: "A simple implementation of Conway's Game of Life."
 		},
 		{
+			name: 'Renderer3D',
+			link: 'https://renderer.sutac.pl/',
+			description:
+				'This is a project that explores 3D rendering. It allows you to draw 3D objects loaded from .obj files and provides a simple engine for creating interactive experiences.'
+		},
+		{
 			name: 'TheAIQuill',
 			link: 'https://theaiquill.site/',
 			description:
@@ -80,7 +86,13 @@
 			</label>
 		</div>
 		<div class="projectItem">
-			<input type="radio" name="project" id="prjTheAIQuill" on:input={() => (current = 5)} />
+			<input type="radio" name="project" id="prjRenderer3D" on:input={() => (current = 5)} />
+			<label for="prjRenderer3D" data-name="Renderer3D">
+				<img src="/images/projects/Renderer3D.svg" alt="Renderer3D" />
+			</label>
+		</div>
+		<div class="projectItem">
+			<input type="radio" name="project" id="prjTheAIQuill" on:input={() => (current = 6)} />
 			<label for="prjTheAIQuill" data-name="TheAIQuill">
 				<img src="/images/projects/TheAIQuill.png" alt="TheAIQuill" />
 			</label>
