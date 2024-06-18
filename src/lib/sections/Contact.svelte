@@ -7,7 +7,7 @@
 			<a
 				href="https://discord.com/users/560883480251334666"
 				target="_blank"
-				rel="noopener noreferrer">Discord</a
+				rel="noopener noreferrer"><span>Discord:</span> <span class="discord">sutac_pl</span></a
 			>
 		</li>
 		<li><a href="mailto:catus.pl@gmail.com">Mail</a></li>
@@ -55,6 +55,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 		background: var(--grd-rad-secondary);
 		color: var(--clr-text);
 		cursor: pointer;
@@ -87,5 +88,14 @@
 	li:is(:hover, :focus-visible, :focus-within) a {
 		scale: 1.05;
 		translate: 0 -1.5%;
+	}
+
+	li a .discord {
+		padding: 0.125em;
+		margin: 0.25em;
+		border-radius: 0.25rem;
+		background: var(--clr-primary);
+		color: var(--clr-accent);
+		text-decoration: none;
 	}
 </style>
