@@ -108,7 +108,7 @@
 
 	<small class="other">
 		I have also done many smaller projects which you can check out with my <a
-			href="https://github.com/sutaC"
+			href="https://www.frontendmentor.io/profile/sutaC"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="custom">Frontend Mentor</a
