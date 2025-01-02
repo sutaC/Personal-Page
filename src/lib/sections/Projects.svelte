@@ -1,110 +1,146 @@
 <script lang="ts">
-	type ProjectData = {
-		name: string;
-		description: string;
-		link: string;
-	};
+	import { onMount } from 'svelte';
 
-	const projects: ProjectData[] = [
-		{
-			name: 'Connect4',
-			link: 'https://connect4.sutac.pl/',
-			description:
-				'Connect4 is a project aimed at implementing the classic game of the same name using web technologies.'
-		},
-		{
-			name: 'Snake',
-			link: 'https://snake.sutac.pl/',
-			description:
-				'The project is a classic Snake game running on its own game engine. It is a web application with a custom design'
-		},
-		{
-			name: 'GwiazdyZSI',
-			link: 'https://gwiazdyzsi.sutac.pl/',
-			description:
-				'Gwiazdy ZSI (ZSI Stars) is an original project aimed at storing and categorizing photos of teachers from ZSI. The application allows you to browse photos and search for them according to the teachers appearing in them.'
-		},
-		{
-			name: 'Chartex',
-			link: 'https://chartex.sutac.pl/',
-			description: 'A simple web application project for dynamic chart visualisation.'
-		},
-		{
-			name: 'GameOfLife',
-			link: 'https://sutac.github.io/GameOfLife/',
-			description: "A simple implementation of Conway's Game of Life."
-		},
-		{
-			name: 'Renderer3D',
-			link: 'https://renderer.sutac.pl/',
-			description:
-				'This is a project that explores 3D rendering. It allows you to draw 3D objects loaded from .obj files and provides a simple engine for creating interactive experiences.'
-		},
-		{
-			name: 'TheAIQuill',
-			link: 'https://theaiquill.site/',
-			description:
-				'Blog written by AI made in Next.js. During the collaboration, I focused on the design and frontend of the website'
+	let projects: HTMLElement;
+	let connector: HTMLElement;
+	let projectList: HTMLElement[];
+	let currentProject: HTMLElement;
+
+	onMount(() => {
+		projectList = Array.from(document.querySelectorAll<HTMLElement>('.project'));
+		currentProject = projectList[0];
+		currentProject.classList.add('current');
+	});
+
+	const handleScroll = () => {
+		const pageMiddle = window.innerHeight / 2 + window.scrollY;
+		let current: Number;
+		if (pageMiddle <= projects.offsetTop) {
+			// Above
+			current = projects.offsetHeight;
+		} else if (pageMiddle >= projects.offsetTop + projects.offsetHeight) {
+			// Below
+			current = 0;
+		} else {
+			// In
+			current = pageMiddle - projects.offsetTop;
 		}
-	];
-
-	let current = 0;
+		// Sets connector offset
+		connector.style.setProperty('--_middle-offset', current.toString() + 'px');
+		// Sets current project
+		currentProject.classList.remove('current');
+		for (const element of projectList) {
+			if (
+				pageMiddle >= projects.offsetTop + element.offsetTop &&
+				pageMiddle <= projects.offsetTop + element.offsetTop + element.offsetHeight
+			) {
+				currentProject = element;
+				break;
+			}
+		}
+		currentProject.classList.add('current');
+	};
 </script>
+
+<svelte:window on:scroll={handleScroll} />
 
 <section id="projects" aria-labelledby="hProjects">
 	<h2 class="custom" id="hProjects">Projects</h2>
 
-	<div class="display">
-		<div class="projectItem">
-			<input type="radio" name="project" id="prjConnect4" checked on:input={() => (current = 0)} />
-			<label for="prjConnect4" data-name="Connect4">
-				<img src="/images/projects/Connect4.png" alt="Connect4" />
-			</label>
-		</div>
-		<div class="projectItem">
-			<input type="radio" name="project" id="prjSnake" on:input={() => (current = 1)} />
-			<label for="prjSnake" data-name="Snake">
-				<img src="/images/projects/Snake.svg" alt="Snake" />
-			</label>
-		</div>
-		<div class="projectItem">
-			<input type="radio" name="project" id="prjGwiazdyZSI" on:input={() => (current = 2)} />
-			<label for="prjGwiazdyZSI" data-name="GwiazdyZSI">
-				<img src="/images/projects/GwiazdyZSI.svg" alt="GwiazdyZSI" />
-			</label>
-		</div>
-		<div class="projectItem">
-			<input type="radio" name="project" id="prjChartex" on:input={() => (current = 3)} />
-			<label for="prjChartex" data-name="Chartex">
-				<img src="/images/projects/Chartex.svg" alt="Chartex" />
-			</label>
-		</div>
-		<div class="projectItem">
-			<input type="radio" name="project" id="prjGameOfLife" on:input={() => (current = 4)} />
-			<label for="prjGameOfLife" data-name="GameOfLife">
-				<img src="/images/projects/GameOfLife.svg" alt="GameOfLife" />
-			</label>
-		</div>
-		<div class="projectItem">
-			<input type="radio" name="project" id="prjRenderer3D" on:input={() => (current = 5)} />
-			<label for="prjRenderer3D" data-name="Renderer3D">
-				<img src="/images/projects/Renderer3D.svg" alt="Renderer3D" />
-			</label>
-		</div>
-		<div class="projectItem">
-			<input type="radio" name="project" id="prjTheAIQuill" on:input={() => (current = 6)} />
-			<label for="prjTheAIQuill" data-name="TheAIQuill">
-				<img src="/images/projects/TheAIQuill.png" alt="TheAIQuill" />
-			</label>
-		</div>
-	</div>
+	<ul class="projects" bind:this={projects}>
+		<div class="connector" bind:this={connector}></div>
 
-	<div class="showcase">
-		<a href={projects[current].link} target="_blank" rel="noopener noreferrer"
-			>{projects[current].name}</a
-		>
-		<small class="description">{projects[current].description}</small>
-	</div>
+		<li class="project">
+			<a href="https://connect4.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/Connect4.png" alt="Connect4" />
+			</a>
+			<div class="description">
+				<a href="https://connect4.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
+					>Connect4</a
+				>
+				<small
+					>Connect4 is a project aimed at implementing the classic game of the same name using web
+					technologies.</small
+				>
+			</div>
+		</li>
+		<li class="project">
+			<a href="https://snake.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/Snake.svg" alt="Snake" />
+			</a>
+			<div class="description">
+				<a href="https://snake.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
+					>Snake</a
+				>
+				<small
+					>The project is a classic Snake game running on its own game engine. It is a web
+					application with a custom design</small
+				>
+			</div>
+		</li>
+		<li class="project">
+			<a href="https://gwiazdyzsi.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/GwiazdyZSI.svg" alt="GwiazdyZSI" />
+			</a>
+			<div class="description">
+				<a
+					href="https://gwiazdyzsi.sutac.pl/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="name">GwiazdyZSI</a
+				>
+				<small
+					>Gwiazdy ZSI (ZSI Stars) is an original project aimed at storing and categorizing photos
+					of teachers from ZSI. The application allows you to browse photos and search for them
+					according to the teachers appearing in them.</small
+				>
+			</div>
+		</li>
+		<li class="project">
+			<a href="https://chartex.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/Chartex.svg" alt="Chartex" />
+			</a>
+			<div class="description">
+				<a href="https://chartex.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
+					>Chartex</a
+				>
+				<small>A simple web application project for dynamic chart visualisation.</small>
+			</div>
+		</li>
+		<li class="project">
+			<a
+				href="https://sutac.github.io/GameOfLife/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="icon"
+			>
+				<img src="/images/projects/GameOfLife.svg" alt="GameOfLife" />
+			</a>
+			<div class="description">
+				<a
+					href="https://sutac.github.io/GameOfLife/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="name">GameOfLife</a
+				>
+				<small>A simple implementation of Conway's Game of Life.</small>
+			</div>
+		</li>
+		<li class="project">
+			<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/Renderer3D.svg" alt="Renderer3D" />
+			</a>
+			<div class="description">
+				<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
+					>Renderer3D</a
+				>
+				<small
+					>This is a project that explores 3D rendering. It allows you to draw 3D objects loaded
+					from .obj files and provides a simple engine for creating interactive experiences.</small
+				>
+			</div>
+		</li>
+	</ul>
 
 	<small class="other">
 		I have also done many smaller projects which you can check out with my <a
@@ -128,52 +164,66 @@
 		margin: auto;
 	}
 
-	.display {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 1rem;
-	}
-
-	.projectItem {
-		flex: 100px;
-		max-width: 100px;
-		border-radius: 1rem;
-		overflow: hidden;
-		box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.2);
-		background: var(--grd-rad-primary);
-		border: 2px solid var(--clr-secondary);
-		transition: all 200ms ease-out;
-		isolation: isolate;
-		z-index: 0;
-	}
-
-	.projectItem label {
+	.projects {
+		margin: 3rem auto;
 		position: relative;
+		padding: 0;
+	}
+
+	.connector {
+		--_middle: 5%;
+		--_middle-offset: 0px; /* Changed by JS */
+		width: 0.125rem;
+		height: 80%;
+		position: absolute;
+		left: 50px;
+		top: 50%;
+		translate: 0 -50%;
+		background: linear-gradient(
+			var(--clr-secondary) 0px,
+			var(--clr-accent) calc(var(--_middle-offset) - var(--_middle) / 2),
+			var(--clr-secondary) calc(var(--_middle-offset) + var(--_middle) / 2)
+		);
+	}
+
+	.project {
+		margin: 1.75rem 0;
+		list-style: none;
 		display: flex;
+		gap: 2rem;
 		justify-content: center;
 		align-items: center;
-		cursor: pointer;
 	}
 
-	.projectItem input {
-		display: none;
+	.project .icon {
+		display: flex;
+		aspect-ratio: 1;
+		flex-shrink: 0;
+		align-items: center;
+		width: fit-content;
+		border-radius: 0.5rem;
+		border: 0.125rem solid var(--clr-secondary);
+		box-shadow: 0 0 0.33rem var(--clr-secondary);
+		background-color: var(--clr-secondary);
+		overflow: hidden;
+		position: relative;
+		transition: all 200ms ease-out;
 	}
 
-	.projectItem img {
+	.project:global(.current) .icon,
+	.project .icon:is(:hover, :focus-visible) {
+		border-color: var(--clr-accent);
+		box-shadow: 0 0 0.33rem var(--clr-accent);
+	}
+
+	.project img {
 		user-select: none;
-		width: 100%;
+		width: 100px;
 		transition: filter 200ms ease-out;
 	}
 
-	.projectItem:is(:hover, :focus-visible) img {
+	.project .icon:is(:hover, :focus-visible) img {
 		filter: blur(4px) brightness(75%);
-	}
-
-	.projectItem:has(:checked) {
-		border-color: var(--clr-accent);
-		box-shadow: 0 0 4px var(--clr-accent);
 	}
 
 	@keyframes fadeIn {
@@ -183,8 +233,8 @@
 		}
 	}
 
-	.projectItem:is(:hover, :focus-visible) label::before {
-		content: attr(data-name);
+	.project .icon:is(:hover, :focus-visible)::before {
+		content: 'Open!';
 		position: absolute;
 		display: block;
 		left: 50%;
@@ -195,29 +245,35 @@
 		font-weight: bold;
 		text-shadow: 0 0 4px #0003;
 		animation: fadeIn 200ms ease-out;
+		color: var(--clr-text);
 	}
 
-	.showcase {
-		width: 100%;
-		margin: 1rem 0;
+	.project .description {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		gap: 10%;
+		gap: 1.5rem;
 		background: var(--grd-lin-primary);
 		padding: 2rem;
-		border-radius: 1rem;
-		box-shadow: 0 4px 4px #0003;
+		border-radius: 0.5rem;
+		flex-grow: 1;
 	}
 
-	.showcase a {
+	.project .description small {
+		text-wrap: balance;
+		width: 100%;
+	}
+
+	.project .name {
 		color: var(--clr-text);
 		transition: all 200ms ease-out;
 	}
 
-	.showcase a:is(:hover, :focus-visible) {
+	.project .name:is(:hover, :focus-visible) {
 		scale: 1.05;
 		translate: 0 -5%;
+		text-shadow: 0 0.25em 0.125em #0004;
 	}
 
 	.other {
@@ -226,5 +282,11 @@
 		text-align: center;
 		margin: auto;
 		text-wrap: balance;
+	}
+
+	@media (width >= 700px) {
+		.project .description {
+			flex-direction: row;
+		}
 	}
 </style>
