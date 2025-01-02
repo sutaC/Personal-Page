@@ -1,7 +1,55 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+
+	let projects: HTMLElement;
+	let connector: HTMLElement;
+	let projectList: HTMLElement[];
+	let currentProject: HTMLElement;
+
+	onMount(() => {
+		projectList = Array.from(document.querySelectorAll<HTMLElement>('.project'));
+		currentProject = projectList[0];
+		currentProject.classList.add('current');
+	});
+
+	const handleScroll = () => {
+		const pageMiddle = window.innerHeight / 2 + window.scrollY;
+		let current: Number;
+		if (pageMiddle <= projects.offsetTop) {
+			// Above
+			current = projects.offsetHeight;
+		} else if (pageMiddle >= projects.offsetTop + projects.offsetHeight) {
+			// Below
+			current = 0;
+		} else {
+			// In
+			current = pageMiddle - projects.offsetTop;
+		}
+		// Sets connector offset
+		connector.style.setProperty('--_middle-offset', current.toString() + 'px');
+		// Sets current project
+		currentProject.classList.remove('current');
+		for (const element of projectList) {
+			if (
+				pageMiddle >= projects.offsetTop + element.offsetTop &&
+				pageMiddle <= projects.offsetTop + element.offsetTop + element.offsetHeight
+			) {
+				currentProject = element;
+				break;
+			}
+		}
+		currentProject.classList.add('current');
+	};
+</script>
+
+<svelte:window on:scroll={handleScroll} />
+
 <section id="projects" aria-labelledby="hProjects">
 	<h2 class="custom" id="hProjects">Projects</h2>
 
-	<ul class="projects">
+	<ul class="projects" bind:this={projects}>
+		<div class="connector" bind:this={connector}></div>
+
 		<li class="project">
 			<a href="https://connect4.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
 				<img src="/images/projects/Connect4.png" alt="Connect4" />
@@ -122,15 +170,20 @@
 		padding: 0;
 	}
 
-	.projects::before {
-		content: '';
+	.connector {
+		--_middle: 5%;
+		--_middle-offset: 0px; /* Changed by JS */
 		width: 0.125rem;
 		height: 80%;
 		position: absolute;
 		left: 50px;
 		top: 50%;
 		translate: 0 -50%;
-		background-color: var(--clr-accent);
+		background: linear-gradient(
+			var(--clr-secondary) 0px,
+			var(--clr-accent) calc(var(--_middle-offset) - var(--_middle) / 2),
+			var(--clr-secondary) calc(var(--_middle-offset) + var(--_middle) / 2)
+		);
 	}
 
 	.project {
@@ -149,11 +202,18 @@
 		align-items: center;
 		width: fit-content;
 		border-radius: 0.5rem;
-		border: 0.125rem solid var(--clr-accent);
-		box-shadow: 0 0 0.33rem var(--clr-accent);
+		border: 0.125rem solid var(--clr-secondary);
+		box-shadow: 0 0 0.33rem var(--clr-secondary);
 		background-color: var(--clr-secondary);
 		overflow: hidden;
 		position: relative;
+		transition: all 200ms ease-out;
+	}
+
+	.project:global(.current) .icon,
+	.project .icon:is(:hover, :focus-visible) {
+		border-color: var(--clr-accent);
+		box-shadow: 0 0 0.33rem var(--clr-accent);
 	}
 
 	.project img {
