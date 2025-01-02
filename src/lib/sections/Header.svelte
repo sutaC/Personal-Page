@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { debounce } from '$lib/utils/functions';
 
 	const scrollBreakpoints: number[] = [];
 
@@ -32,7 +33,7 @@
 	};
 </script>
 
-<svelte:window on:scroll={handleScroll} bind:innerHeight={winHeight} />
+<svelte:window on:scroll={debounce(handleScroll, 5)} bind:innerHeight={winHeight} />
 
 <header>
 	<nav>
@@ -84,7 +85,9 @@
 		font-size: 0.75rem;
 		text-decoration: none;
 		color: var(--clr-text);
-		transition: opacity 300ms ease-out, border-image 400ms ease-out;
+		transition:
+			opacity 300ms ease-out,
+			border-image 400ms ease-out;
 	}
 
 	a.navItem {
