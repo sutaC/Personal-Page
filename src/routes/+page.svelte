@@ -6,6 +6,7 @@
 	import Projects from '$lib/sections/Projects.svelte';
 	import Contact from '$lib/sections/Contact.svelte';
 	import Technologies from '$lib/sections/Technologies.svelte';
+	import CursorFollower from '$lib/components/CursorFollower.svelte';
 </script>
 
 <div class="app">
@@ -17,6 +18,8 @@
 	<Contact />
 	<Footer />
 </div>
+
+<CursorFollower />
 
 <style>
 	.app {
