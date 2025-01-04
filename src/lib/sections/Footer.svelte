@@ -16,5 +16,6 @@
 		padding: 1.25rem;
 		border-top: 1px solid;
 		border-image: var(--grd-lin-primary) 1;
+		background-color: var(--clr-background);
 	}
 </style>

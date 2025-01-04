@@ -218,7 +218,6 @@
 	}
 
 	.project img {
-		user-select: none;
 		width: 100px;
 		transition: filter 200ms ease-out;
 	}

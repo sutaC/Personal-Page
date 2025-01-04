@@ -24,6 +24,8 @@
 	--grd-rad-primary: radial-gradient(var(--clr-primary), var(--clr-secondary));
 	--grd-rad-triad: radial-gradient(var(--clr-accent), var(--clr-primary), var(--clr-secondary));
 	--grd-rad-secondary: radial-gradient(var(--clr-secondary), var(--clr-secondary-light));
+	/* --grd-rad-fade: radial-gradient(var(--clr-secondary-light), var(--clr-background)); */
+	--grd-rad-fade: radial-gradient(var(--clr-secondary-light), var(--clr-background));
 }
 
 * {
@@ -79,6 +81,11 @@ small {
 
 img {
 	max-width: 100%;
+	user-select: none;
+}
+
+a {
+	user-select: none;
 }
 
 /* Custom elements */

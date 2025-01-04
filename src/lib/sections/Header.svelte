@@ -72,7 +72,6 @@
 
 	.logo {
 		max-height: 3rem;
-		user-select: none;
 		transition: all 200ms ease-out;
 	}
 
