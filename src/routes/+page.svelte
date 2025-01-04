@@ -7,6 +7,12 @@
 	import Contact from '$lib/sections/Contact.svelte';
 	import Technologies from '$lib/sections/Technologies.svelte';
 	import CursorFollower from '$lib/components/CursorFollower.svelte';
+	import { onMount } from 'svelte';
+
+	// Disables img dragging
+	onMount(() => {
+		document.querySelectorAll('img').forEach((img) => (img.draggable = false));
+	});
 </script>
 
 <div class="app">
