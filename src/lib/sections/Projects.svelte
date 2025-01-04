@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { debounce } from '$lib/utils/functions';
 
 	let projects: HTMLElement;
 	let connector: HTMLElement;
@@ -43,7 +42,7 @@
 	};
 </script>
 
-<svelte:window on:scroll={debounce(handleScroll, 5)} />
+<svelte:window on:scroll|passive={handleScroll} />
 
 <section id="projects" aria-labelledby="hProjects">
 	<h2 class="custom" id="hProjects">Projects</h2>
