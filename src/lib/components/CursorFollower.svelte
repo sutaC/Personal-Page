@@ -2,12 +2,14 @@
 	let follower: HTMLElement;
 	let hidden = true;
 	let down = false;
+	let touch = false;
 
-	const handleMouseOver = () => {
-		hidden = false;
+	const handleTouch = () => {
+		touch = true;
+		hidden = true;
 	};
 
-	const handleMouseOut = () => {
+	const handleMouseLeave = () => {
 		hidden = true;
 	};
 
@@ -20,6 +22,8 @@
 	};
 
 	const handleMouseMove = (event: MouseEvent) => {
+		if (touch) return;
+		hidden = false;
 		setTimeout(() => {
 			follower.style.left = (event.clientX - follower.offsetWidth / 2).toString() + 'px';
 			follower.style.top = (event.clientY - follower.offsetHeight / 2).toString() + 'px';
@@ -27,12 +31,13 @@
 	};
 </script>
 
+<svelte:window on:touchstart|once={handleTouch} />
+
 <svelte:body
-	on:mousemove={handleMouseMove}
-	on:mouseover={handleMouseOver}
-	on:mouseout={handleMouseOut}
-	on:mousedown={handleMouseDown}
-	on:mouseup={handleMouseUp}
+	on:mousemove|passive={handleMouseMove}
+	on:mouseleave|passive={handleMouseLeave}
+	on:mousedown|passive={handleMouseDown}
+	on:mouseup|passive={handleMouseUp}
 />
 
 <div class="follower" class:hidden class:down bind:this={follower}></div>
