@@ -97,12 +97,20 @@
 			</div>
 		</li>
 		<li class="project">
-			<a href="https://chartex.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+			<a
+				href="https://sutac.github.io/Chartex/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="icon"
+			>
 				<img src="/images/projects/Chartex.svg" alt="Chartex" />
 			</a>
 			<div class="description">
-				<a href="https://chartex.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
-					>Chartex</a
+				<a
+					href="https://sutac.github.io/Chartex/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="name">Chartex</a
 				>
 				<small>A simple web application project for dynamic chart visualisation.</small>
 			</div>
