@@ -97,12 +97,20 @@
 			</div>
 		</li>
 		<li class="project">
-			<a href="https://chartex.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+			<a
+				href="https://sutac.github.io/Chartex/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="icon"
+			>
 				<img src="/images/projects/Chartex.svg" alt="Chartex" />
 			</a>
 			<div class="description">
-				<a href="https://chartex.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
-					>Chartex</a
+				<a
+					href="https://sutac.github.io/Chartex/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="name">Chartex</a
 				>
 				<small>A simple web application project for dynamic chart visualisation.</small>
 			</div>
@@ -138,6 +146,25 @@
 					>This is a project that explores 3D rendering. It allows you to draw 3D objects loaded
 					from .obj files and provides a simple engine for creating interactive experiences.</small
 				>
+			</div>
+		</li>
+		<li class="project">
+			<a
+				href="https://sutac.github.io/TheStubborn/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="icon"
+			>
+				<img src="/images/projects/TheStubborn.png" alt="TheStubborn" />
+			</a>
+			<div class="description">
+				<a
+					href="https://sutac.github.io/TheStubborn/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="name">TheStubborn</a
+				>
+				<small>Web game implementation inspired by minigame in Pikuniku</small>
 			</div>
 		</li>
 	</ul>
