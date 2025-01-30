@@ -148,6 +148,25 @@
 				>
 			</div>
 		</li>
+		<li class="project">
+			<a
+				href="https://sutac.github.io/TheStubborn/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="icon"
+			>
+				<img src="/images/projects/TheStubborn.png" alt="TheStubborn" />
+			</a>
+			<div class="description">
+				<a
+					href="https://sutac.github.io/TheStubborn/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="name">TheStubborn</a
+				>
+				<small>Web game implementation inspired by minigame in Pikuniku</small>
+			</div>
+		</li>
 	</ul>
 
 	<small class="other">
