@@ -18,8 +18,8 @@
 <div class="app">
 	<Header />
 	<Hero />
-	<Projects />
 	<About />
+	<Projects />
 	<Technologies />
 	<Contact />
 	<Footer />

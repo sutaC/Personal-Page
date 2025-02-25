@@ -4,8 +4,8 @@
 	const scrollBreakpoints: number[] = [];
 
 	if (browser) {
-		scrollBreakpoints.push(document.getElementById('projects')?.offsetTop || 0);
 		scrollBreakpoints.push(document.getElementById('about')?.offsetTop || 0);
+		scrollBreakpoints.push(document.getElementById('projects')?.offsetTop || 0);
 		scrollBreakpoints.push(document.getElementById('technologies')?.offsetTop || 0);
 		scrollBreakpoints.push(document.getElementById('contact')?.offsetTop || 0);
 	}
@@ -36,8 +36,8 @@
 
 <header>
 	<nav>
-		<a href="#projects" class="navItem" class:current={current === 0}>Projects</a>
-		<a href="#about" class="navItem" class:current={current === 1}>About</a>
+		<a href="#about" class="navItem" class:current={current === 0}>About</a>
+		<a href="#projects" class="navItem" class:current={current === 1}>Projects</a>
 		<a href=" " aria-label="Start"><img src="/images/logo.svg" alt="Logo" class="logo" /></a>
 		<a href="#technologies" class="navItem" class:current={current === 2}>Technologies</a>
 		<a href="#contact" class="navItem" class:current={current === 3}>Contact</a>
