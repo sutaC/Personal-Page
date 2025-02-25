@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let projects: HTMLElement;
-	let connector: HTMLElement;
-	let projectList: HTMLElement[];
-	let currentProject: HTMLElement;
+	let projects: HTMLElement | null = $state(null);
+	let connector: HTMLElement | null = $state(null);
+	let currentProject: HTMLElement | null = $state(null);
+	let projectList: HTMLElement[] = [];
 
 	onMount(() => {
 		projectList = Array.from(document.querySelectorAll<HTMLElement>('.project'));
@@ -13,6 +13,7 @@
 	});
 
 	const handleScroll = () => {
+		if (!projects || !connector || !currentProject) return;
 		const pageMiddle = window.innerHeight / 2 + window.scrollY;
 		let current: Number;
 		if (pageMiddle <= projects.offsetTop) {
@@ -42,7 +43,7 @@
 	};
 </script>
 
-<svelte:window on:scroll|passive={handleScroll} />
+<svelte:window onscroll={handleScroll} />
 
 <section id="projects" aria-labelledby="hProjects">
 	<h2 class="custom" id="hProjects">Projects</h2>
@@ -238,7 +239,7 @@
 	}
 
 	.project:global(.current) .icon,
-	.project .icon:is(:hover, :focus-visible) {
+	.project .icon:is(:global(:hover, :focus-visible)) {
 		border-color: var(--clr-accent);
 		box-shadow: 0 0 0.33rem var(--clr-accent);
 	}
@@ -248,7 +249,7 @@
 		transition: filter 200ms ease-out;
 	}
 
-	.project .icon:is(:hover, :focus-visible) img {
+	.project .icon:is(:global(:hover, :focus-visible)) img {
 		filter: blur(4px) brightness(75%);
 	}
 
@@ -259,7 +260,7 @@
 		}
 	}
 
-	.project .icon:is(:hover, :focus-visible)::before {
+	.project .icon:is(:global(:hover, :focus-visible))::before {
 		content: 'Open!';
 		position: absolute;
 		display: block;
@@ -296,7 +297,7 @@
 		transition: all 200ms ease-out;
 	}
 
-	.project .name:is(:hover, :focus-visible) {
+	.project .name:is(:global(:hover, :focus-visible)) {
 		scale: 1.05;
 		translate: 0 -5%;
 		text-shadow: 0 0.25em 0.125em #0004;

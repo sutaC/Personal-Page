@@ -10,29 +10,25 @@
 		scrollBreakpoints.push(document.getElementById('contact')?.offsetTop || 0);
 	}
 
-	let current: number | null = null;
-	let winHeight = 0;
+	let current: number | null = $state(null);
+	let winHeight: number = $state(0);
 
-	const handleScroll = () => {
+	const handleScroll = (event: Event) => {
 		if (scrollBreakpoints.length === 0) return (current = null);
-
 		const scroll = window.scrollY + winHeight / 2;
-
 		if (scroll >= 0 && scroll < scrollBreakpoints[0]) {
 			return (current = null);
 		}
-
 		for (let i = 1; i < scrollBreakpoints.length; i++) {
 			if (scroll >= scrollBreakpoints[i - 1] && scroll < scrollBreakpoints[i]) {
 				return (current = i - 1);
 			}
 		}
-
 		current = scrollBreakpoints.length - 1;
 	};
 </script>
 
-<svelte:window on:scroll|passive={handleScroll} bind:innerHeight={winHeight} />
+<svelte:window onscroll={handleScroll} bind:innerHeight={winHeight} />
 
 <header>
 	<nav>
@@ -74,7 +70,7 @@
 		transition: all 200ms ease-out;
 	}
 
-	.logo:is(:hover, :focus-visible) {
+	.logo:is(:global(:hover, :focus-visible)) {
 		scale: 1.05;
 		translate: 0 2.5%;
 	}
@@ -99,13 +95,13 @@
 		border-image: var(--grd-lin-triad) 1;
 	}
 
-	nav:has(a.navItem:is(:hover, :focus-visible)) a.navItem:not(:hover, :focus-visible) {
+	nav:has(:global(a.navItem:is(:hover, :focus-visible))) a.navItem:not(:hover, :focus-visible) {
 		opacity: 0.5;
 		border-image: var(--grd-lin-secondary) 1;
 		scale: 0.95;
 	}
 
-	a.navItem:is(:hover, :focus-within) {
+	a.navItem:is(:global(:hover, :focus-within)) {
 		border-image: var(--grd-lin-triad) 1;
 		padding-bottom: 0.3rem;
 		scale: 1.05;

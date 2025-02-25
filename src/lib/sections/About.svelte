@@ -45,7 +45,9 @@
 		aspect-ratio: 1;
 		border-radius: 100%;
 		border: 2px solid var(--clr-secondary);
-		box-shadow: inset 0 4px 4px hsla(0, 0%, 0%, 0.2), 0 4px 4px hsla(0, 0%, 0%, 0.2);
+		box-shadow:
+			inset 0 4px 4px hsla(0, 0%, 0%, 0.2),
+			0 4px 4px hsla(0, 0%, 0%, 0.2);
 	}
 
 	.name {

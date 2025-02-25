@@ -1,8 +1,15 @@
 <script lang="ts">
-	let follower: HTMLElement;
-	let hidden = true;
-	let down = false;
-	let touch = false;
+	let follower: HTMLElement | null = $state(null);
+	let hidden = $state(true);
+	let down = $state(false);
+	let touch = $state(false);
+
+	function once(fn: Function | null) {
+		return (event: Event) => {
+			if (fn) fn.call(event);
+			fn = null;
+		};
+	}
 
 	const handleTouch = () => {
 		touch = true;
@@ -25,19 +32,20 @@
 		if (touch) return;
 		hidden = false;
 		setTimeout(() => {
+			if (!follower) return;
 			follower.style.left = (event.clientX - follower.offsetWidth / 2).toString() + 'px';
 			follower.style.top = (event.clientY - follower.offsetHeight / 2).toString() + 'px';
 		}, 75);
 	};
 </script>
 
-<svelte:window on:touchstart|once={handleTouch} />
+<svelte:window ontouchstart={once(handleTouch)} />
 
 <svelte:body
-	on:mousemove|passive={handleMouseMove}
-	on:mouseleave|passive={handleMouseLeave}
-	on:mousedown|passive={handleMouseDown}
-	on:mouseup|passive={handleMouseUp}
+	onmousemove={handleMouseMove}
+	onmouseleave={handleMouseLeave}
+	onmousedown={handleMouseDown}
+	onmouseup={handleMouseUp}
 />
 
 <div class="follower" class:hidden class:down bind:this={follower}></div>
