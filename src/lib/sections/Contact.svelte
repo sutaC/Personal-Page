@@ -62,6 +62,7 @@
 		box-shadow: 0 4px 4px #0003;
 		z-index: 1;
 		transition: all 200ms ease-out;
+		text-decoration: none;
 	}
 
 	@keyframes fadeIn {
@@ -94,7 +95,6 @@
 		padding: 0.125em;
 		margin: 0.25em;
 		border-radius: 0.25rem;
-		background: var(--clr-primary);
 		color: var(--clr-accent);
 		text-decoration: none;
 	}
