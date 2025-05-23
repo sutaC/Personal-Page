@@ -7,16 +7,23 @@
 			<a
 				href="https://discord.com/users/560883480251334666"
 				target="_blank"
-				rel="noopener noreferrer"><span>Discord:</span> <span class="discord">sutac_pl</span></a
+				rel="noopener noreferrer">Discord: <span class="highlight">sutac_pl</span></a
 			>
 		</li>
-		<li><a href="mailto:catus.pl@gmail.com">Mail</a></li>
-		<li><a href="https://github.com/sutaC" target="_blank" rel="noopener noreferrer">Github</a></li>
+		<li>
+			<a href="mailto:catus.pl@gmail.com">Mail: <span class="highlight">catus.pl@gmail.com</span></a
+			>
+		</li>
+		<li>
+			<a href="https://github.com/sutaC" target="_blank" rel="noopener noreferrer"
+				>Github: <span class="highlight">sutaC</span></a
+			>
+		</li>
 		<li>
 			<a
 				href="https://www.frontendmentor.io/profile/sutaC"
 				target="_blank"
-				rel="noopener noreferrer">Frontend Mentor</a
+				rel="noopener noreferrer">Frontend Mentor: <span class="highlight">sutaC</span></a
 			>
 		</li>
 	</ul>
@@ -49,7 +56,7 @@
 	}
 
 	li a {
-		width: 8rem;
+		width: 10rem;
 		aspect-ratio: 1;
 		text-align: center;
 		display: flex;
@@ -91,7 +98,9 @@
 		translate: 0 -1.5%;
 	}
 
-	li a .discord {
+	li a .highlight {
+		font-size: 0.85rem;
+		word-break: break-all;
 		padding: 0.125em;
 		margin: 0.25em;
 		border-radius: 0.25rem;
