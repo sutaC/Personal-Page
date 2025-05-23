@@ -52,16 +52,60 @@
 		<div class="connector" bind:this={connector}></div>
 
 		<li class="project">
+			<a href="https://gwiazdyzsi.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/GwiazdyZSI.svg" alt="GwiazdyZSI" />
+			</a>
+			<div class="description">
+				<div class="links">
+					<a href="https://gwiazdyzsi.sutac.pl/" target="_blank" rel="noopener noreferrer"
+						>GwiazdyZSI</a
+					>
+					<a href="https://github.com/sutaC/Gwiazdy-ZSI" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
+				<small
+					>Gwiazdy ZSI (ZSI Stars) is an original project aimed at storing and categorizing photos
+					of teachers from ZSI. The application allows you to browse photos and search for them
+					according to the teachers appearing in them.</small
+				>
+			</div>
+		</li>
+
+		<li class="project">
 			<a href="https://connect4.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
 				<img src="/images/projects/Connect4.png" alt="Connect4" />
 			</a>
 			<div class="description">
-				<a href="https://connect4.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
-					>Connect4</a
-				>
+				<div class="links">
+					<a href="https://connect4.sutac.pl/" target="_blank" rel="noopener noreferrer">Connect4</a
+					>
+					<a href="https://github.com/sutaC/Connect4" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
 				<small
 					>Connect4 is a project aimed at implementing the classic game of the same name using web
 					technologies.</small
+				>
+			</div>
+		</li>
+		<li class="project">
+			<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/Renderer3D.svg" alt="Renderer3D" />
+			</a>
+			<div class="description">
+				<div class="links">
+					<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer"
+						>Renderer3D</a
+					>
+					<a href="https://github.com/sutaC/Renderer3D" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
+				<small
+					>This is a project that explores 3D rendering. It allows you to draw 3D objects loaded
+					from .obj files and provides a simple engine for creating interactive experiences.</small
 				>
 			</div>
 		</li>
@@ -70,50 +114,16 @@
 				<img src="/images/projects/Snake.svg" alt="Snake" />
 			</a>
 			<div class="description">
-				<a href="https://snake.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
-					>Snake</a
-				>
+				<div class="links">
+					<a href="https://snake.sutac.pl/" target="_blank" rel="noopener noreferrer">Snake</a>
+					<a href="https://github.com/sutaC/Snake-game" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
 				<small
 					>The project is a classic Snake game running on its own game engine. It is a web
 					application with a custom design</small
 				>
-			</div>
-		</li>
-		<li class="project">
-			<a href="https://gwiazdyzsi.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
-				<img src="/images/projects/GwiazdyZSI.svg" alt="GwiazdyZSI" />
-			</a>
-			<div class="description">
-				<a
-					href="https://gwiazdyzsi.sutac.pl/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="name">GwiazdyZSI</a
-				>
-				<small
-					>Gwiazdy ZSI (ZSI Stars) is an original project aimed at storing and categorizing photos
-					of teachers from ZSI. The application allows you to browse photos and search for them
-					according to the teachers appearing in them.</small
-				>
-			</div>
-		</li>
-		<li class="project">
-			<a
-				href="https://sutac.github.io/Chartex/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="icon"
-			>
-				<img src="/images/projects/Chartex.svg" alt="Chartex" />
-			</a>
-			<div class="description">
-				<a
-					href="https://sutac.github.io/Chartex/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="name">Chartex</a
-				>
-				<small>A simple web application project for dynamic chart visualisation.</small>
 			</div>
 		</li>
 		<li class="project">
@@ -126,27 +136,15 @@
 				<img src="/images/projects/GameOfLife.svg" alt="GameOfLife" />
 			</a>
 			<div class="description">
-				<a
-					href="https://sutac.github.io/GameOfLife/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="name">GameOfLife</a
-				>
+				<div class="links">
+					<a href="https://sutac.github.io/GameOfLife/" target="_blank" rel="noopener noreferrer"
+						>GameOfLife</a
+					>
+					<a href="https://github.com/sutaC/GameOfLife" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
 				<small>A simple implementation of Conway's Game of Life.</small>
-			</div>
-		</li>
-		<li class="project">
-			<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
-				<img src="/images/projects/Renderer3D.svg" alt="Renderer3D" />
-			</a>
-			<div class="description">
-				<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer" class="name"
-					>Renderer3D</a
-				>
-				<small
-					>This is a project that explores 3D rendering. It allows you to draw 3D objects loaded
-					from .obj files and provides a simple engine for creating interactive experiences.</small
-				>
 			</div>
 		</li>
 		<li class="project">
@@ -159,13 +157,36 @@
 				<img src="/images/projects/TheStubborn.png" alt="TheStubborn" />
 			</a>
 			<div class="description">
-				<a
-					href="https://sutac.github.io/TheStubborn/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="name">TheStubborn</a
-				>
+				<div class="links">
+					<a href="https://sutac.github.io/TheStubborn/" target="_blank" rel="noopener noreferrer"
+						>TheStubborn</a
+					>
+					<a href="https://github.com/sutaC/TheStubborn" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
 				<small>Web game implementation inspired by minigame in Pikuniku</small>
+			</div>
+		</li>
+		<li class="project">
+			<a
+				href="https://sutac.github.io/Chartex/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="icon"
+			>
+				<img src="/images/projects/Chartex.svg" alt="Chartex" />
+			</a>
+			<div class="description">
+				<div class="links">
+					<a href="https://sutac.github.io/Chartex/" target="_blank" rel="noopener noreferrer"
+						>Chartex</a
+					>
+					<a href="https://github.com/sutaC/Chartex" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
+				<small>A simple web application project for dynamic chart visualisation.</small>
 			</div>
 		</li>
 	</ul>
@@ -202,7 +223,7 @@
 		--_middle: 5%;
 		--_middle-offset: 0px; /* Changed by JS */
 		width: 0.125rem;
-		height: 80%;
+		height: 85%;
 		position: absolute;
 		left: 50px;
 		top: 50%;
@@ -292,12 +313,20 @@
 		width: 100%;
 	}
 
-	.project .name {
+	.project .links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 0.125rem;
+	}
+
+	.project .links a {
 		color: var(--clr-text);
 		transition: all 200ms ease-out;
 	}
 
-	.project .name:is(:global(:hover, :focus-visible)) {
+	.project .links a:is(:global(:hover, :focus-visible)) {
 		scale: 1.05;
 		translate: 0 -5%;
 		text-shadow: 0 0.25em 0.125em #0004;
