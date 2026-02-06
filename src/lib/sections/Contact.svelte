@@ -11,8 +11,7 @@
 			>
 		</li>
 		<li>
-			<a href="mailto:catus.pl@gmail.com">Mail: <span class="highlight">catus.pl@gmail.com</span></a
-			>
+			<a href="mailto:contact@sutac.pl">Mail: <span class="highlight">contact@sutac.pl</span></a>
 		</li>
 		<li>
 			<a href="https://github.com/sutaC" target="_blank" rel="noopener noreferrer"

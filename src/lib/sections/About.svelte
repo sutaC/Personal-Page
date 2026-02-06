@@ -8,10 +8,9 @@
 		<div class="description">
 			<p class="name desktop">sutaC</p>
 			<small>
-				I'm a full stack developer, but I mainly specialize in frontend. I recently finished school,
-				however I'm still learning and programming is my passion. I started learning webdev in 2022
-				and I have already managed to do some more interesting projects in this field, including
-				creating some simple games.
+				I'm an aspiring web developer with a passion for building engaging web experiences. I've
+				worked on a variety of projects, including interactive apps, small games, and Python
+				applications, and I’m always exploring new ways to create on the web.
 			</small>
 		</div>
 	</div>

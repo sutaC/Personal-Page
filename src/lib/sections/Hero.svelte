@@ -1,6 +1,6 @@
 <main>
 	<h1>Hi there!</h1>
-	<p>I'm sutaC, a full stack developer specializing in front end</p>
+	<p>Hi! I'm sutaC, an aspiring web developer bringing ideas to life online</p>
 </main>
 
 <style>

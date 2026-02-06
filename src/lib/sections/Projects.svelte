@@ -168,27 +168,6 @@
 				<small>Web game implementation inspired by minigame in Pikuniku</small>
 			</div>
 		</li>
-		<li class="project">
-			<a
-				href="https://sutac.github.io/Chartex/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="icon"
-			>
-				<img src="/images/projects/Chartex.svg" alt="Chartex" />
-			</a>
-			<div class="description">
-				<div class="links">
-					<a href="https://sutac.github.io/Chartex/" target="_blank" rel="noopener noreferrer"
-						>Chartex</a
-					>
-					<a href="https://github.com/sutaC/Chartex" target="_blank" rel="noopener noreferrer"
-						><small>Repo</small></a
-					>
-				</div>
-				<small>A simple web application project for dynamic chart visualisation.</small>
-			</div>
-		</li>
 	</ul>
 
 	<small class="other">

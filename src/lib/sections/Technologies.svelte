@@ -14,6 +14,9 @@
 			>
 		</li>
 		<li>
+			<img src="/images/technologies/Python.svg" alt="Python" /><small class="name">Python</small>
+		</li>
+		<li>
 			<img src="/images/technologies/JSDoc.png" alt="JSDoc" /><small class="name">JSDoc</small>
 		</li>
 		<li><img src="/images/technologies/PWA.png" alt="PWA" /><small class="name">PWA</small></li>
@@ -30,6 +33,9 @@
 			>
 		</li>
 		<li>
+			<img src="/images/technologies/SQLite.svg" alt="SQLite" /><small class="name">SQLite</small>
+		</li>
+		<li>
 			<img src="/images/technologies/MySQL.png" alt="MySQL" /><small class="name">MySQL</small>
 		</li>
 		<li>
@@ -44,6 +50,9 @@
 			<img src="/images/technologies/Express-js.png" alt="Express.js" /><small class="name"
 				>Express.js</small
 			>
+		</li>
+		<li>
+			<img src="/images/technologies/Flask.svg" alt="Flask" /><small class="name">Flask</small>
 		</li>
 		<li><img src="/images/technologies/HTMX.png" alt="HTMX" /><small class="name">HTMX</small></li>
 		<li>
