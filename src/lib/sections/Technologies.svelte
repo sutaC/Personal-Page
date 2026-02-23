@@ -14,7 +14,7 @@
 			>
 		</li>
 		<li>
-			<img src="/images/technologies/Python.svg" alt="Python" /><small class="name">Python</small>
+			<img src="/images/technologies/Python.png" alt="Python" /><small class="name">Python</small>
 		</li>
 		<li>
 			<img src="/images/technologies/JSDoc.png" alt="JSDoc" /><small class="name">JSDoc</small>

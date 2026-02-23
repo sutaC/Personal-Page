@@ -52,13 +52,33 @@
 		<div class="connector" bind:this={connector}></div>
 
 		<li class="project">
+			<a href="https://gitglimpse.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/GitGlimpse.svg" alt="Git Glimpse" />
+			</a>
+			<div class="description">
+				<div class="links">
+					<a href="https://gitglimpse.sutac.pl/" target="_blank" rel="noopener noreferrer"
+						>Git&nbsp;Glimpse</a
+					>
+					<a href="https://github.com/sutaC/git-glimpse" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
+				<small
+					>About Simple aplication for sharing GitHub private repos with your firends via public
+					link.</small
+				>
+			</div>
+		</li>
+
+		<li class="project">
 			<a href="https://gwiazdyzsi.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
 				<img src="/images/projects/GwiazdyZSI.svg" alt="GwiazdyZSI" />
 			</a>
 			<div class="description">
 				<div class="links">
 					<a href="https://gwiazdyzsi.sutac.pl/" target="_blank" rel="noopener noreferrer"
-						>GwiazdyZSI</a
+						>Gwiazdy&nbsp;ZSI</a
 					>
 					<a href="https://github.com/sutaC/Gwiazdy-ZSI" target="_blank" rel="noopener noreferrer"
 						><small>Repo</small></a
@@ -69,6 +89,48 @@
 					of teachers from ZSI. The application allows you to browse photos and search for them
 					according to the teachers appearing in them.</small
 				>
+			</div>
+		</li>
+
+		<li class="project">
+			<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
+				<img src="/images/projects/Renderer3D.svg" alt="Renderer3D" />
+			</a>
+			<div class="description">
+				<div class="links">
+					<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer"
+						>Renderer3D</a
+					>
+					<a href="https://github.com/sutaC/Renderer3D" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
+				<small
+					>This is a project that explores 3D rendering. It allows you to draw 3D objects loaded
+					from .obj files and provides a simple engine for creating interactive experiences.</small
+				>
+			</div>
+		</li>
+
+		<li class="project">
+			<a
+				href="https://github.com/sutaC/StrangeBrows"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="icon"
+			>
+				<img src="/images/technologies/Python.png" alt="StrangeBrows" />
+			</a>
+			<div class="description">
+				<div class="links">
+					<a href="https://github.com/sutaC/StrangeBrows" target="_blank" rel="noopener noreferrer"
+						>StrangeBrows</a
+					>
+					<a href="https://github.com/sutaC/StrangeBrows" target="_blank" rel="noopener noreferrer"
+						><small>Repo</small></a
+					>
+				</div>
+				<small>Simple web browser build from scratch in python.</small>
 			</div>
 		</li>
 
@@ -87,25 +149,6 @@
 				<small
 					>Connect4 is a project aimed at implementing the classic game of the same name using web
 					technologies.</small
-				>
-			</div>
-		</li>
-		<li class="project">
-			<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer" class="icon">
-				<img src="/images/projects/Renderer3D.svg" alt="Renderer3D" />
-			</a>
-			<div class="description">
-				<div class="links">
-					<a href="https://renderer.sutac.pl/" target="_blank" rel="noopener noreferrer"
-						>Renderer3D</a
-					>
-					<a href="https://github.com/sutaC/Renderer3D" target="_blank" rel="noopener noreferrer"
-						><small>Repo</small></a
-					>
-				</div>
-				<small
-					>This is a project that explores 3D rendering. It allows you to draw 3D objects loaded
-					from .obj files and provides a simple engine for creating interactive experiences.</small
 				>
 			</div>
 		</li>
