@@ -20,9 +20,9 @@
 		</li>
 		<li>
 			<a
-				href="https://www.frontendmentor.io/profile/sutaC"
+				href="https://www.linkedin.com/in/antonisiekanski/"
 				target="_blank"
-				rel="noopener noreferrer">Frontend Mentor: <span class="highlight">sutaC</span></a
+				rel="noopener noreferrer">Linkedin: <span class="highlight">in/antonisiekanski</span></a
 			>
 		</li>
 	</ul>
